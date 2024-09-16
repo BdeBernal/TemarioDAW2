@@ -1,0 +1,25 @@
+#esquerda{
+    display: flex;
+    justify-content: left;
+    color: rgb(41, 44, 187);
+}
+
+#dereita{
+    display: flex;
+    justify-content: right;
+    color: rgb(124, 13, 13);
+}
+
+#centro{
+    display: flex;
+    justify-content: center;
+    color: rgb(27, 122, 14);
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+*{
+    background-color: rgb(220, 202, 243);
+}
