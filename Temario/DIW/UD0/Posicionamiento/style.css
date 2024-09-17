@@ -1,0 +1,62 @@
+#francia{
+    border: 1px black dotted;
+    max-width: 300px;
+    height: 150px;
+    display: flex;
+}
+
+#francia > div:first-child{
+    background-color: blue;
+    width: 100px;
+}
+
+#francia > div:nth-child(2){
+    background-color: white;
+    width: 100px;
+}
+
+#francia > div:nth-child(3){
+    background-color: red;
+    width: 100px;
+}
+
+#separados{
+    border: 1px black dotted;
+    max-width: 300px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+#separados > div:nth-child(1){
+    background-color: rgb(187, 134, 54);
+    height: 145px;
+    width: auto;
+}
+
+#separados > div:nth-child(2){
+    background-color: rgb(59, 59, 182);
+    height: 145px;
+    width: auto;
+    margin-top: 5px;
+}
+
+#cuadro{
+    display: flex;
+    max-width: 400px;
+    max-height: 150px;
+    border: 1px black dotted;
+}
+
+#cuadro > div:nth-child(1){
+    background-color: rgb(235, 235, 102);
+    width: 250px;
+    height: 150px;
+}
+
+#cuadro > div:nth-child(2){
+    background-color: rgb(117, 164, 235);
+    width: 250px;
+    height: 150px;
+}
