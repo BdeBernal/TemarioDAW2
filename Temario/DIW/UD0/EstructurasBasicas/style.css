@@ -9,6 +9,11 @@
     padding: 0 0 0 10px;
 }
 
+body{
+    height: 100vh;
+    margin: 0;
+}
+
 #navegacion{
     color: green;
     background-color: grey;
@@ -35,10 +40,11 @@ nav{
     background-color: rgb(163, 158, 158);
     display: flex;
     justify-content: center;
+    height: 10%;
 }
 
 #centro {
     display: flex;
-    height: 400px;
-    min-width: 100%;
+    flex-grow: 1;
+    height: 80%;
 }
