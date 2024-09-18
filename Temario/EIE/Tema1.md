@@ -2,7 +2,6 @@
 Cuenta ajena vs Cuenta propia
 
 ## Empresario
-Empresario -> Persona con responsabilidad de organizar la producción ordenando y dirigiendo los recursos humanos y materiales que conforman la empresa.
 
 Derecho mercantil -> Persona que desarrolla una actividad constitutiva de empresa, adquiriendo la titularidad de las obligaciones y derechos nacidos en la misma.
 
@@ -14,7 +13,7 @@ Emprendedor -> Las circunstancias le han llevado a ello, necesidad urgente de en
 Distinguir (Motivos/Razones, Motivación interna/Ilusión)
 
 ## Requisitos
-Riesgo = Acpetar el riesgo, influencia familiar o amistades.
+Riesgo = Aceptar el riesgo, influencia familiar o amistades.
 
 Capital/Tecnología = Capital inicial y acceso a la tecnología requerida.
 
