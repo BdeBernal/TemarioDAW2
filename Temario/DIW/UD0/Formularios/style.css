@@ -1,0 +1,20 @@
+.largo{
+    width: 60%;
+}
+
+.corto{
+    width: 20%;
+}
+
+#ajustes{
+    display: flex;
+    justify-content: center;
+}
+
+#loginGoogle{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

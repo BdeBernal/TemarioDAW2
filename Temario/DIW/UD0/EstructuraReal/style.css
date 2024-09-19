@@ -1,33 +1,94 @@
-body{
+#principal{
+    height: 9%;
     width: 100%;
-    height: 100%;
-    margin: 0;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #centro{
+    height: 80%;
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    min-width: 100%;
-    min-height: 60%;
-}
-
-section{
-    background-color: rgb(216, 136, 90);
-    min-width: 60%;
-    min-height: 100%;
-    margin: 5px 5px 5px 5px;
+    margin: 1% 0 1% 0;
 }
 
 nav{
-    background-color: rgb(216, 136, 90);
-    min-width: 20%;
-    min-height: 100%;
-    margin: 5px 5px 5px 5px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(41, 138, 138);
+    margin: 0 1% 0 0;
+}
+
+section{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: burlywood;
+    flex-direction: column;
+}
+
+section > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0 0 0;
+}
+
+section > header{
+    width: 90%;
+    height: 20%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > article{
+    width: 90%;
+    height: 40%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > footer{
+    width: 90%;
+    height: 20%;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 5% 0;
 }
 
 aside{
-    background-color: rgb(216, 136, 90);
-    min-width: 20%;
-    min-height: 100%;
-    margin: 5px 5px 5px 5px;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(41, 138, 138);
+    margin: 0 0 0 1%;
+}
+
+#pie{
+    height: 9%;
+    width: 100%;
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
 }
