@@ -53,3 +53,11 @@ function nombreFuncion($parámetros){
 
 nombreFuncion($parámetros);
 ```
+
+Si no sabemos cuantos valores tendrá el argumento
+```
+function miFuncion(...$x){
+
+}
+```
+
