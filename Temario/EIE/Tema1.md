@@ -62,3 +62,12 @@ Fuentes:
     - Innovación producto (nuevo producto, producto de forma distinta)
 
 ## Plan de empresa
+Documento que analiza y estudia la idea empresarial detalladamente indicando su viabilidad técnica, comercial, económica y financiera. (Int: Preventiva, Ext: Presentación)
+
+## Tipos de pensamiento
+Pensamiento convergente -> Parte izquierda del cerebro, lógica, única solución, objetivo, racional.
+
+Pensamiento divergente -> Parte derecha del cerebro, complementario con el convergente, espontáneo, creativo.
+
+Pensamiento lateral -> Ideas que están fuera del patrón de pensamiento habitual.
+
