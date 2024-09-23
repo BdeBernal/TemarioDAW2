@@ -11,10 +11,25 @@
     justify-content: center;
 }
 
-#loginGoogle{
-    background-color: cadetblue;
+#formulario{
+    border: 1px black solid;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 50%;
+    height: 250px;
+}
+.entero{
+    width: 100%;
+}
+
+textarea{
+    max-width: fit-content;
+    max-height: 150px;
+}
+
+#elTercero{
+    border: 1px black solid;
+    padding: 3px;
+    border-radius: 10px;
 }

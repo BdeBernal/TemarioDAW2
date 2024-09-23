@@ -85,24 +85,101 @@
         </form>
     </div>
 
-    <div id="loginGoogle">
+    <br>
 
-        <h3>Google</h3>
+    <div id="simple">
+        <form action="#" id="formulario">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td><input type="text" class="entero"></td>
+                </tr>
+                <tr>
+                    <td>Correo electrónico:</td>
+                    <td><input type="email" class="entero"></td>
+                </tr>
+                <tr>
+                    <td>Mensaje:</td>
+                    <td><textarea name="mensaje" entero rows="7" cols="20"></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Envía tu mensaje" id="botoncito" ></td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
-        <form action="#">
+    <br>
 
-            <input type="password" name="Contraseña" id="Contraseña" placeholder="Introduce tu contraseña">
+    <div id="elTercero">
+        <form action="#"></form>
 
-            <div>
-                
-                <a href="#">¿Has olvidado tu contraseña?</a>
-
-                <input type="submit" value="Siguiente">
-
-            </div>
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td>
+                        <input type="text" name="Nombre" id="Nombre">
+                        F.Nac.:
+                        <input type="text">
+                        DNI:
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apellidos:</td>
+                    <td>
+                        <input type="text" class="largo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Calle y número:</td>
+                    <td>
+                        <input type="text" class="largo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Código Postal:</td>
+                    <td>
+                        <input type="text" class="corto">
+                        Ciudad:
+                        <input type="text" class="largo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Provincia:</td>
+                    <td>
+                        <input type="text" class="corto">
+                        Teléfono:
+                        <input type="text" class="largo">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Opción:</td>
+                    <td>
+                        <select name="OPCIONES" id="OPCIONES">
+                            <option value="OPCION 1">OPCIÓN 1</option>
+                            <option value="OPCION 2">OPCIÓN 2</option>
+                        </select>
+                        Escoja una opción
+                    </td>
+                </tr>
+                <tr>
+                    <td>Comentarios personales:</td>
+                    <td>
+                        <textarea name="texto" id="texto" cols="70%"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td id="ajustes">
+                        <input type="button" value="Enviar Datos">
+                        <input type="button" value="Borrar los datos">
+                    </td>
+                </tr>
+            </table>
 
         </form>
-
     </div>
+
 </body>
 </html>
