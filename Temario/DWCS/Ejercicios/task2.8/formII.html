@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormII</title>
+</head>
+<body>
+    <form action="form.php" method="post">
+        Username: <input type="text" name="Username" id="Username"><br>
+
+        Password: <input type="password" name="Password" id="Password"><br>
+
+        City Of Employment: <input type="text" name="City" id="City"><br>
+
+        Web server: <select name="Servers" id="Servers">
+            <option value="Server1">Server1</option>
+            <option value="Server2">Server2</option>
+        </select><br>
+
+        Please specify your role: 
+        <input type="radio" name="Role" id="Admin">Admin
+        <input type="radio" name="Role" id="Engineer">Engineer
+        <input type="radio" name="Role" id="Manager">Manager
+        <input type="radio" name="Role" id="Guest">Guest<br>
+
+        Single Sign-on to the following:
+        <input type="checkbox" name="Sign-on" id="Mail">Mail
+        <input type="checkbox" name="Sign-on" id="Payroll">Payroll
+        <input type="checkbox" name="Sign-on" id="Self-Service">Self-Service<br>
+
+        <input type="submit" value="Login">
+
+        <input type="reset" value="Reset">
+
+    </form>
+</body>
+</html>
