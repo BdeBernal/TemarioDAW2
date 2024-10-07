@@ -20,7 +20,7 @@
 
     <form action="manage.php" method="post">
 
-        Name and surnames: <input type="text" name="fullName" id="fullName"><br>
+        Name and surnames: <input type="text" name="fullName" id="fullName" required><br>
 
         Subject to enroll:  
             <select name="subject" id="subject">

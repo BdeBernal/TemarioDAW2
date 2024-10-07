@@ -9,7 +9,7 @@
     $subjectErr = $fullNameErr = "";
     $module = $moduleErr = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){ 
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){ //Confirmar que subject y fullName no estén vacíos
         if(empty($_POST["subject"]) || $_POST["subject"] == ""){
             $subjectErr = "Selecciona una asignatura válida";
         } else {
@@ -28,14 +28,26 @@
     <br><a href="manage2.php?fullName=<?php echo $_POST["fullName"]?>&subject=<?php echo $_POST["subject"]?>">Next Page</a>
     
     <?php
-
     } elseif ($_SERVER["REQUEST_METHOD"] == "GET"){
+        if(empty($_GET["fullName"]) || $_GET["fullName"] == ""){
+            $fullNameErr = "Error al obtener el nombre";
+        } else {
+            $fullName = test_input($_GET["fullName"]);
+        }
+
+        if(empty($_GET["subject"]) || $_GET["subject"] == ""){
+            $subjectErr = "Error al obtener la asignatura";
+        } else {
+            $subject = test_input($_GET["subject"]);
+        }
+
         if(empty($_GET["Module"]) || $_GET["Module"] == ""){
             $moduleErr = "Error al seleccionar modulo";
         } else {
             $module = test_input($_GET["Module"]);
         }
         
-        echo $_GET["fullName"]  . " wants to enroll in the following subject " . $_GET["subject"]  . " and " . $module . " classes";
+        echo $fullName . " wants to enroll in the following subject " . $subject . " and " . $module . " classes";
+        echo $module . " is the selected option";
     }
 ?>

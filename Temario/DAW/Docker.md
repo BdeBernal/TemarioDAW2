@@ -1,5 +1,7 @@
 ## Docker
 
+Sacar las imágenes de docker hub
+
 ```
 docker ps -a -> Información de contenedores
 docker images -> Imágenes disponibles
