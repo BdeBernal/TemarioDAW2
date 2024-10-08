@@ -1,0 +1,21 @@
+body {
+    background-color: #e0dbd7;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    color: #0056b3;
+}
+
+p {
+    color: #666;
+}
+
+input[type="radio"] {
+    margin: 10px 10px 10px 4px;
+    width: 14px;
+    height: 14px;
+}

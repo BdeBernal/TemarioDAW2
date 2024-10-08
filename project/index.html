@@ -2,15 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="styleindex.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Login</title>
 </head>
 <body>
-    <form action="manage.php" method="post">
-        Username: <input type="text" name="Username" id="Username"><br>
-        Password: <input type="password" name="Password" id="Password"><br>
-        <input type="submit" value="Enviar">
-    </form>
+    <div id="loginBasico">
+        <form action="manage.php" method="post">
+            Username: <input type="text" name="Username" id="Username" required><br><br>
+            Password: <input type="password" name="Password" id="Password" required><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
 </body>
 </html>
