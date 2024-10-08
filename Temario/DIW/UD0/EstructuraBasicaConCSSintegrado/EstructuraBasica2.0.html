@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2ºTarea</title>
+</head>
+<body>
+
+    <style>
+        #cabeceira{
+    color: yellow;
+    background-color: black;
+    width: auto;
+    height: 10%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 0 0 10px;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+}
+
+#navegacion{
+    color: green;
+    background-color: grey;
+    width: 20%;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 0 0;
+}
+
+#contido{
+    color: rgb(214, 148, 159);
+    background-color: rgb(235, 226, 226);
+    padding: 0 0 0 10px;
+    width: 80%;
+}
+
+#pe{
+    color: crimson;
+    background-color: rgb(163, 158, 158);
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+
+#centro {
+    display: flex;
+    flex-grow: 1;
+    height: 80%;
+}
+    </style>
+
+    <header id="cabeceira">
+        <p>Párrafo en la cabecera de la página.</p>
+    </header>
+
+    <div id="centro">
+        <aside id="navegacion">
+            <nav>
+                <a href="#">Enlace 1</a>
+                <a href="#">Enlace 2</a>
+                <a href="#">Enlace 3</a>
+            </nav>
+        </aside>
+
+        <div id="contido">
+            <h2>Ejemplo: Uso del elemento "div" y del atributo id</h2>
+        </div>
+    </div>
+   
+
+    <footer id="pe">
+        <p>Párrafo en el pie de la página</p>
+    </footer>
+
+</body>
+</html>

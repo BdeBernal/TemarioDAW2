@@ -34,8 +34,8 @@
 </head>
 <body>
     <header>
-        <h2>Test de la personalidad</h2>
-        <h4>¡Bienvenido <?php echo $userName ?>!</h4>
+        <h1>Test de la personalidad</h1>
+        <h3>¡Bienvenido <?php echo $userName ?>!</h3>
         <p>Responda a estas preguntas del 1-5 siendo 1 muy en desacuerdo y 5 muy de acuerdo:</p>
     </header>
     <div id="form">

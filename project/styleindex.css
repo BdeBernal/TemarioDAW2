@@ -10,14 +10,14 @@
 form {
     width: 100%;
     max-width: 500px; 
-    background-color: #e0dddd;
+    background-color: #a7a096;
     padding: 20px; 
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.18);
 }
 
 body {
-    background: linear-gradient(135deg, #f0a9ab 0%, #fad0c4 100%);
+    background: linear-gradient(135deg, #a76a36 0%, #d4ab7d 100%);
     animation: gradientBackground 15s ease infinite;
 }
 
