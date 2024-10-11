@@ -10,15 +10,31 @@
 form {
     width: 100%;
     max-width: 500px; 
-    background-color: #c48e86;
     padding: 20px; 
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(196, 142, 134, 0.3), 0 1px 3px rgb(196, 142, 134, 0.4);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 body {
-    background: linear-gradient(90deg, #000000 0%, #1f1e1e 25%, #363636 50%, #1f1e1e 75%, #000000 100%);
-    animation: gradientBackground 15s ease infinite;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url(images/background.jpeg);
+    transition: background-position 0.5s ease;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 #loginBasico {
