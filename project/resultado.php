@@ -1,17 +1,21 @@
 <?php
 
-    function test_input($data) { // Comprobación de entrada de datos 
+    // Data input check for invalid characters
+    function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
     }
 
+        // Initialize variables with the result from the previous form
         $valorPregunta1 = test_input($_POST["Pregunta1"]);
         $valorPregunta2 = test_input($_POST["Pregunta2"]);
         $valorPregunta3 = test_input($_POST["Pregunta3"]);
         $valorPregunta4 = test_input($_POST["Pregunta4"]);
-        $sumaTotal = $valorPregunta1 + $valorPregunta2 + $valorPregunta3 + $valorPregunta4;
+        $valorPregunta4 = test_input($_POST["Pregunta5"]);
+        // Sum of the answers to the final result
+        $sumaTotal = $valorPregunta1 + $valorPregunta2 + $valorPregunta3 + $valorPregunta4 + $valorPregunta5;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +28,7 @@
 <body>
     <div id="result">
         <?php
+            // Sintax to check the total sum of the answers and display the result
             if ($sumaTotal > 0 && $sumaTotal <= 5){
                 echo "<h3>Eres una persona reservada, exigente y honesta</h3>";
             } else if ($sumaTotal > 5 && $sumaTotal <= 10){
@@ -32,13 +37,20 @@
                 echo "<h3>Eres una persona extrovertida, amigable y animada</h3>";
             } else if ($sumaTotal > 15 && $sumaTotal <= 20){
                 echo "<h3>Eres una persona que se preocupa en los demás, sociable y sentimental</h3>";
+            } else if ($sumaTotal > 20 && $sumaTotal <= 25){
+                echo "<h3>Eres una persona segura de ti misma, sociable... </h3>";
             }
         ?>
     </div>
+    <div id="enlaces">
+        <p class="destacado">¡Enlaces!</p>
+        <p class="destacado">⬋   ⬇   ⬊</p>
+    </div>
     <div id="links">
-        <a href="https://www.16personalities.com/es">Enlace1</a>
-        <a href="https://www.arealme.com/es">Enlace2</a>
-        <a href="https://www.idrlabs.com/tests.php">Enlace3</a>
+        <!-- Links to other tests of interest -->
+        <div class="card"><p>16Personalities</p><a href="https://www.16personalities.com/es"></a></div>
+        <div class="card"><p>ARealMe</p><a href="https://www.arealme.com/es"></a></div>
+        <div class="card"><p>IDRLabs</p><a href="https://www.idrlabs.com/tests.php"></a></div>
     </div>
 </body>
 </html>

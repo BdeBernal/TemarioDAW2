@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh; 
+    height: 50vh; 
     padding: 20px; 
     box-sizing: border-box; 
 }
@@ -19,22 +19,52 @@ h3 {
 #links {
     display: flex;
     justify-content: center;
-    gap: 20px;
 }
 
-#links a {
-    text-decoration: none;
-    color: #4C5F6B;
+.destacado{
+    font-size: 23px;
     font-weight: bold;
-    padding: 10px 15px;
-    border: 2px solid #4C5F6B;
+    color: #f5f7fa;
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+
+}
+
+#links div>a {
+    display: inline-block;
+    width: 100%;
+    max-width: 170px;
+    height: 200px;
     border-radius: 5px;
-    transition: background-color 1s, color 0.3s;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%);
+    background-image: url(images/Luna.png);
 }
 
 #links a:hover {
-    background-color: #83A0A0;
+    filter: brightness(100%);
     color: #fff;
+    transform: scale(1.25);
+    transition: transform 0.3s ease;
 }
 
 body {

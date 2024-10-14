@@ -1,15 +1,18 @@
 <?php
 
-    function test_input($data) { // Comprobación de entrada de datos 
+    // Data input check for invalid characters
+    function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
     }
 
+    // Initialize variables
     $userName = $passWord = "";
     $userNameErr = $passWordErr = "";
 
+    // Check if the log-in has been submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         if(empty($_POST["Username"]) || $_POST["Username"] == ""){
             $userNameErr = "Nombre introducido incorrecto";
@@ -27,10 +30,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="stylemanage.css">
+    <link rel="stylesheet" href="styleManage.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>Form</title>
 </head>
 <body>
     <header>
@@ -39,6 +42,7 @@
         <p>Responda a estas preguntas del 1-5 siendo 1 muy en desacuerdo y 5 muy de acuerdo:</p>
     </header>
     <div id="form">
+        <!-- Used the sintax include to simplify the code -->
         <?php include 'form.php' ?>
     </div>
 </body>
