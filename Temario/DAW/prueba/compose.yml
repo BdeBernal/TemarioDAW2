@@ -1,14 +1,26 @@
 services:
-  ##web1:
-  ##  image: httpd
-  ##  ports:
-  ##    - 8080:80
-  ##  volumes:
-  ##    - /media/MV-Linux/MaquinasVirtuais/a23bernalrc/Repositorios/TemarioDAW2/Temario/prueba:/prueba
+  web1:
+    build: debian
+    hostname: web
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./html:/var/www/html
   bd:
     image: mysql
-    ports:
-      - 3306:3306
-    environment:
-      - MYSQL_ROOT_PASSWORD=abc123..
+    hostname: basededatos
+
+    env_file:
+    - .env_bd
     volumes:
+    - datosbd:/var/lib/mysql
+    secrets:
+    - db_root_password
+    - db_password
+    phpmyadmin:
+    - image: phpmyadmin
+    ports:
+    - 8000:80
+    environment:
+      - PMA_HOST=bd
