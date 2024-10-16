@@ -1,32 +1,3 @@
-<?php
-
-    // Data input check for invalid characters
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    // Initialize variables
-    $userName = $passWord = "";
-    $userNameErr = $passWordErr = "";
-
-    // Check if the log-in has been submitted
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        if(empty($_POST["Username"]) || $_POST["Username"] == ""){
-            $userNameErr = "Nombre introducido incorrecto";
-        } else {
-            $userName = test_input($_POST["Username"]);
-        }
-        if(empty($_POST["Password"]) || $_POST["Password"] == ""){
-            $passWordErr = "Contraseña introducida incorrecto";
-        } else {
-            $passWord = test_input($_POST["Password"]);
-        }
-    }
-        
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

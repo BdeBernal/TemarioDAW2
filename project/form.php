@@ -37,3 +37,6 @@
 
         <input type="submit" value="Enviar">  
 </form>
+<form action="logout.php" method="post">
+        <button type="submit">Logout</button>
+</form>

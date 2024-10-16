@@ -18,7 +18,9 @@ h3 {
 
 #links {
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en filas cuando sea necesario */
     justify-content: center;
+    gap: 10px; /* Espacio entre las tarjetas */
 }
 
 .destacado{
@@ -37,19 +39,29 @@ p{
 
 .card {
     display: flex;
-    flex-shrink: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 300px;
+    box-sizing: border-box;
+}
 
+@media (max-width: 768px) {
+    .card {
+        max-width: 200px; /* To small windows */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: 100%; /* To even smaller windows */
+    }
 }
 
 #links div>a {
-    display: inline-block;
+    display: flex;
     width: 100%;
     max-width: 170px;
     height: 200px;
