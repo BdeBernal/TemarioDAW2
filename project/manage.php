@@ -9,7 +9,7 @@
 <body>
     <header>
         <h1>Test de la personalidad</h1>
-        <h3>¡Bienvenido <?php echo $userName ?>!</h3>
+        <h3>¡Bienvenido!</h3>
         <p>Responda a estas preguntas del 1-5 siendo 1 muy en desacuerdo y 5 muy de acuerdo:</p>
     </header>
     <div id="form">
