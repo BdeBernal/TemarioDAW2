@@ -13,7 +13,7 @@
         $valorPregunta2 = test_input($_POST["Pregunta2"]);
         $valorPregunta3 = test_input($_POST["Pregunta3"]);
         $valorPregunta4 = test_input($_POST["Pregunta4"]);
-        $valorPregunta4 = test_input($_POST["Pregunta5"]);
+        $valorPregunta5 = test_input($_POST["Pregunta5"]);
         // Sum of the answers to the final result
         $sumaTotal = $valorPregunta1 + $valorPregunta2 + $valorPregunta3 + $valorPregunta4 + $valorPregunta5;
 ?>
