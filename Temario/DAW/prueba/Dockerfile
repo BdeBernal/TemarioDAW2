@@ -4,7 +4,7 @@ RUN apt update && apt install -y apache2 php libapache2-mod-php php-cli php-mysq
 
 WORKDIR /var/www/html
 
-RUN install.sh
+RUN apt clean && rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
 EXPOSE 443
