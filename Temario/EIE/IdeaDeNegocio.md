@@ -7,20 +7,23 @@ App mezcla comida y deporte:
 
 Fortalezas:
 
-- Metido en el mundo de la salud nutricional y el deporte y psicología para futuro
-- Ambición por una aplicación que puedo usar cada día
+- Interés e información sobre el tema de la app
 - Conocer el mundo de marketing a través de redes sociales
 - Renovación de la propuesta de valor a lo largo del tiempo
 
 Debilidades:
 
 - Falta de experiencia en despliegue de aplicaciones
+- Limitaciones en personalización
+- Falta de interacción humana
 
 Oportunidades:
 
 - Rango amplio de gente a la que se dirige la aplicación
 - Ejercicios o comida personalizada para rangos de edad o condiciones específicas
+- Implementación de psicología y ia para mayor personalización
 
 Amenazas:
 
 - Competencia con mayor calidad y mejor propuesta de valor
+- Interés en nutricion y deporte presencial, dejando de lado la app

@@ -43,6 +43,7 @@ for word in words :
     
 print(dictionary)
 
+### Ejemplo de clase
 class Dog:
     def bark(self) :
         print("bark")
@@ -52,3 +53,27 @@ myDog = Dog()
 myDog.bark()
 myDog.name = "Name"
 print(myDog.name)
+###
+
+def datosPersonales(age, name, surname = "Apellido"):
+    if name == None :
+        name = ""
+        print(f"{name}{surname} is {age} years old")
+    else :
+        print(f"{name} {surname} is {age} years old")
+
+datosPersonales(21, None)
+
+def potencia(int1, int2) :
+    if not isinstance(int1, int) or type(int2) != int : # Verifica tipo de dato de entrada
+        raise Exception("No son números") # Lanza excepción
+    else :
+        result = 1
+        for _ in range(int2):
+            result *= int1
+        return result
+try:
+    print(f"{potencia(2, 3)}")
+    print(f"{potencia(2, 'jac')}") # Recoge la excepcións
+except Exception as e:
+    print(e)
