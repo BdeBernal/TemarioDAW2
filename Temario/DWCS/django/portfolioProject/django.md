@@ -61,7 +61,7 @@ docker compose run web django-admin startproject nombre .
 ### 4- Meterte dentro de la carpeta nombre recién creada
 
 ```
-docker compose run web python manage.py startapp otroNombre
+docker compsoe run web python manage.py startapp otroNombre
 ```
 
 ### 5- Preparación entorno
