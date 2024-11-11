@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Form Result</h1>
+    <p>Name: {{ name }}</p>
+    <p>Password: {{ password }}</p>
+    <p>City of employment: {{ City }}</p>
+    <p>Web server: {{ webserver }}</p>
+    <p>Role: {{ role }}</p>
+    <p>Sign-on: {{ signOn }}</p>
+    <a href="{% url 'home' %}">Back to form</a>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        p {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: #333 1px 1px 2px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #f9f9f9;
+    }
+    h2 {
+        text-align: center;
+    }
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    select, input[type="checkbox"] {
+        margin-right: 10px;
+    }
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #306d32;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+
+    <h2>Password Generator</h2>
+    <form action="{% url 'password' %}">
+
+        <label for="length">Select Length:</label>
+        <select name="length" id="length">
+            <option value="6">6</option>
+            <option value="9">9</option>
+            <option value="12">12</option>
+            <option value="14">14</option>    
+        </select>
+
+        <label>
+            <input type="checkbox" name="uppercase"> UpperCase
+        </label>
+        <label>
+            <input type="checkbox" name="numbers"> Numbers
+        </label>
+        <label>
+            <input type="checkbox" name="special"> Special Characters
+        </label>
+
+        <input type="submit" value="Generate Password">
+    </form>
+
+</body>
+</html>
