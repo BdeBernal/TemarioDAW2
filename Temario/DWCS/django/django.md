@@ -108,3 +108,5 @@ carpeta de proyecto creada => crear carpeta templates y dentro otra carpeta con 
 ```
 '% url 'enlace' %'
 ```
+
+Si queremos instalar más librerías habría que introducirlas en requirements.txt
