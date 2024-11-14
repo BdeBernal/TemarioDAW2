@@ -64,7 +64,29 @@ docker compose run web django-admin startproject nombre .
 docker compose run web python manage.py startapp otroNombre
 ```
 
-### 5- Preparación entorno
+### 5- Para guardar los cambios en models.py
+
+```
+docker compose run web python manage.py makemigrations
+docker compose run web python manage.py migrate
+```
+
+Para acceder a admin crear un super user
+
+```
+docker compose run web python manage.py createsuperuser
+```
+
+En admin.py de la app hay que importar el model.py y en concreto la clase
+
+```
+from .models import Project
+
+# Register your models here.
+admin.site.register(Project)
+```
+
+### 6- Preparación entorno
 
 Uso de archivos básicos:
 urls.py => poner enlaces de las paginas que queremos introducir

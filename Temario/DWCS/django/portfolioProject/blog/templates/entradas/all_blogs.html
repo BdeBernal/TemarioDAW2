@@ -1,1 +1,48 @@
-e
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Blog</h1>
+    <h2>New content daily</h2>
+    {% for entrance in entrances %}
+    <div>
+        <p><strong>{{entrance.title}}</strong></p> 
+        {{entrance.date}} <br>
+        {{entrance.description}} <br><br>
+    </div>
+    {% endfor %}
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+
+        * {
+            color: #333;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: rgba(245, 245, 220, 0.377);
+        }
+
+        h2{
+            margin-bottom: 50px;
+        }
+
+        div{
+            margin: 0 auto;
+            width: 50%;
+            border: 1px solid #333d;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #33333311;
+        }
+
+    </style>
+</body>
+</html>

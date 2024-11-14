@@ -11,7 +11,7 @@
         {{project.description}} <br>
         <img src="{{project.image.url}}" alt="Cat with eyes" width="205" height="200"> <br>
     {% if project.url %}
-        <a href="{{project.url}}">Link</a>
+        <a href="{% url 'all_blogs' %}">Link</a>
     {% endif %}
     {% endfor %}
 </body>
