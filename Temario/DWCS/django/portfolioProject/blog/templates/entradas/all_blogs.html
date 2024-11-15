@@ -11,9 +11,9 @@
     <h2>New content daily</h2>
     {% for entrance in entrances %}
     <div>
-        <p><strong>{{entrance.title}}</strong></p> 
-        {{entrance.date}} <br>
-        {{entrance.description}} <br><br>
+        <h3><strong>{{entrance.title}}</strong></h3> 
+        <p>{{entrance.date}}</p>
+        <p>{{entrance.description}}</p> <br>
     </div>
     {% endfor %}
 
@@ -21,13 +21,13 @@
         body {
             margin: 0;
             height: 100vh;
+            background-color: rgba(245, 245, 220, 0.377);
         }
 
         * {
             color: #333;
             text-align: center;
             font-family: Arial, sans-serif;
-            background-color: rgba(245, 245, 220, 0.377);
         }
 
         h2{
