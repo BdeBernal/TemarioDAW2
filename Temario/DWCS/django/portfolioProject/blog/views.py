@@ -4,7 +4,7 @@ from .models import Entrance
 # Create your views here.
 
 def all_blogs(request):
-    entrances = Entrance.objects.order_by('-date')[:3] # Only to show the latest 3
+    entrances = Entrance.objects.order_by('-date')#[:3] # Only to show the latest 3
     return render(request, 'entradas/all_blogs.html', {'entrances': entrances})
 
 def details(request, blog_id):

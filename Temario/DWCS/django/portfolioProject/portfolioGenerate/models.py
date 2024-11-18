@@ -6,3 +6,6 @@ class Project(models.Model):
     description = models.CharField(max_length=250)
     image = models.ImageField(upload_to="portfolioGenerate/images/")
     url = models.URLField(blank=True)
+
+    def __str__(self): ## To see the title in the admin panel of each project
+        return self.title
