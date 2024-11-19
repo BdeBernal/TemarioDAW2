@@ -11,27 +11,54 @@
 
     {% extends 'webpage/plantilla.html' %}
     {% block content %}
-    <div class="container">
-        <div class="d-block">
-            {% load static %}
+        {% load static %}
+            <img id="inicio" src="{% static 'portfolioGenerate/entrada.jpeg' %}" alt="Entrada">
+            <div id="titulo">Portafolio</div>
+        <div id="general"></div>
+        {% for project in projects %}
+            <img class='proyectos' src="{{project.image.url}}" alt="Cat with eyes">
+            <p>{{project.description}}</p>
+                {% if project.url %}
 
-            <img src="{% static 'portfolioGenerate/entrada.jpeg' %}" alt="Entrada"> <br>
-            {% for project in projects %}
-            <div class="card" style="width:400px ;">
-                <img class="card-img-top" src="{{project.image.url}}" alt="Cat with eyes" width="205" height="200">
-                <div class="card-body">
-                    <p class="card-text">{{project.description}}</p>
-                    {% if project.url %}
-
-                    <a class="btn btn-primary" href="{{project.url}}">Link</a>
-                </div>
-            {% endif %}
-            </div>
+                <a href="{{project.url}}">Link</a>
+                {% endif %}
             {% endfor %}
         </div>
+        <a href="{% url 'entrances:all_blogs' %}">View All Blogs</a>
 
-        <a class="btn btn-outline-dark" href="{% url 'entrances:all_blogs' %}">View All Blogs</a>
-    </div>
+        <style>
+
+            #titulo{
+                font-size: 35px;
+                color: white;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                font-family: Georgia;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #general{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+    
+            .proyectos{
+                border: 2px solid black;
+                max-width: 350px;
+                height: auto;
+                transition: transform 0.3s ease;
+            }
+
+            .proyectos:hover{
+                transform: scale(1.1);
+            }
+
+        </style>
     {% endblock %}
 </body>
 </html>
