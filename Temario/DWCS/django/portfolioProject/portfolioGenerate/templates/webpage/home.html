@@ -7,58 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 </head>
-<body>
+<body data-bs-theme="dark">
 
     {% extends 'webpage/plantilla.html' %}
     {% block content %}
         {% load static %}
-            <img id="inicio" src="{% static 'portfolioGenerate/entrada.jpeg' %}" alt="Entrada">
-            <div id="titulo">Portafolio</div>
-        <div id="general"></div>
-        {% for project in projects %}
-            <img class='proyectos' src="{{project.image.url}}" alt="Cat with eyes">
-            <p>{{project.description}}</p>
-                {% if project.url %}
-
-                <a href="{{project.url}}">Link</a>
-                {% endif %}
+        <div class="d-flex justify-content-center">
+            <div class="align-content-center">
+                <h2>Portfolio Web-Developer</h2>
+                <p>Personal porjects and info about myself</p>
+                <nav class="d-flex justify-content-center">
+                    <a href="https://github.com/BdeBernal"><img src="{% static 'portfolioGenerate/github.png' %}" alt="Logo Github" style="width:20px; margin-right: 10px;"></a>
+                    <a href="https://es.pinterest.com/"><img src="{% static 'portfolioGenerate/pinterest.png' %}" alt="Logo Pinterest" style="width:20px; margin-right: 10px;"></a>
+                    <a href="https://www.infojobs.net/"><img src="{% static 'portfolioGenerate/infojobs.png' %}" alt="Logo Infojobs" style="width:20px; margin-right: 10px;"></a>
+                </nav>
+            </div>
+            <img src="{% static 'portfolioGenerate/entrada.png' %}" alt="Entrada">
+        </div>
+        <br>
+        <div class="d-flex justify-content-around">
+            {% for project in projects %}
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" style="height:150px;" src="{{project.image.url}}" alt="Cat with eyes">
+                    <div class="card-body">
+                        <p class="card-text">{{project.description}}</p>
+                    </div>
+                </div>
             {% endfor %}
         </div>
-        <a href="{% url 'entrances:all_blogs' %}">View All Blogs</a>
-
-        <style>
-
-            #titulo{
-                font-size: 35px;
-                color: white;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-                font-family: Georgia;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-
-            #general{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                flex-direction: row;
-            }
-    
-            .proyectos{
-                border: 2px solid black;
-                max-width: 350px;
-                height: auto;
-                transition: transform 0.3s ease;
-            }
-
-            .proyectos:hover{
-                transform: scale(1.1);
-            }
-
-        </style>
+        <br>
+        <a href="{% url 'entrances:all_blogs' %}" class="d-flex justify-content-center" style="color:antiquewhite; text-decoration: none;">View All Blogs</a>
     {% endblock %}
 </body>
 </html>

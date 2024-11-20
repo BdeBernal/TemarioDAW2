@@ -8,20 +8,31 @@
     <title>Portfolio</title>
 </head>
 <body>
+  <style>
+    .navbar {
+      background-color: #e9ecef;
+    }
+    .nav-link {
+      color: #343a40;
+    }
+    .nav-link:hover {
+      background-color: #343a40;
+    }
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    .navbar-text{
+      color: #343a40;
+    }
+  </style>
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <div class="container-fluid">
             <span class="navbar-text">Welcome to my Portfolio!</span>
 
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-           <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="{% url 'entrances:all_blogs' %}">Blog</a>
             </li>
           </ul>
         </div>
