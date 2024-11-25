@@ -11,13 +11,31 @@
 
     {% extends 'webpage/plantilla.html' %}
     {% block content %}
+    <br> <h1 class="d-flex justify-content-center">Actividades</h1> <br>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Titulo</th>
+          <th scope="col">Descripción</th>
+          <th scope="col">Imagen</th>
+          <th scope="col">Personas</th>
+        </tr>
+      </thead>
+      <tbody>
 
       {% for actividades in actividades %}
-        <p>{{actividades.titulo}}</p>
-        <p>{{actividades.descripcion}}</p>
-        <p><img src="{{actividades.imagen}}" alt="Imagen navideña"></p>
-        <p>{{actividades.personas}}</p>
+        <tr>
+          <td>{{actividades.titulo}}</td>
+          <td>{{actividades.descripcion|striptags}}</td>
+          <td><img class="use" src="{{actividades.imagen.url}}" alt="Imagen navideña" height="200px" max-width="300px"></td>
+          <td>{{actividades.personas}}</td>
+        </tr>
+
       {% endfor %}
+
+        </tbody>
+      </table>
+
     {% endblock %}
 </body>
 </html>
