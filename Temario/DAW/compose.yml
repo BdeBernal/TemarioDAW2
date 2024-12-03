@@ -5,6 +5,7 @@ services:
     volumes:
       - ./html:/web
       - ./vhosts/server1.conf:/etc/apache2/sites-enabled/server1.conf
+      - ./vhosts/server2.conf:/etc/apache2/sites-enabled/server2.conf
     networks:
       rede_test:
         aliases:
