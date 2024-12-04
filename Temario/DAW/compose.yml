@@ -6,6 +6,7 @@ services:
       - ./html:/web
       - ./vhosts/server1.conf:/etc/apache2/sites-enabled/server1.conf
       - ./vhosts/server2.conf:/etc/apache2/sites-enabled/server2.conf
+      - ./html/alias:/srv
     networks:
       rede_test:
         aliases:
