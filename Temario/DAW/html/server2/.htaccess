@@ -1,4 +1,0 @@
-DirectoryIndex un.html dos.html tres.html
-Require all granted
-
-ErrorDocument 403 /noPermitido.html
