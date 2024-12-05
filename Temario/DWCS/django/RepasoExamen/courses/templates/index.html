@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+<body>
+    {% extends "plantilla.html" %}
+    {% block content %}
+        {% for courses in courses %}
+            <h2>{{courses.name}}</h2>
+            <p>{{courses.longDescription|truncatechars:180}}</p>
+            <img src="media/{{courses.img}}" alt="Imagen" style="width: 200px; height: 200px;">
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>
