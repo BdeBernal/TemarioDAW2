@@ -11,7 +11,7 @@
         {% for courses in courses %}
             <h2>{{courses.name}}</h2>
             <p>{{courses.longDescription|truncatechars:180}}</p>
-            <img src="media/{{courses.img}}" alt="Imagen" style="width: 200px; height: 200px;">
+            <img src="/media/{{courses.img}}" alt="Imagen" style="width: 200px; height: 200px;">
         {% endfor %}
     {% endblock %}
 </body>
