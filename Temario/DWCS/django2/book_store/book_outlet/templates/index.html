@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Book Outlet{% endblock %}
+
+{% block content %}
+
+    <h1>Book Outlet</h1>
+
+    <ul>
+        {% for book in Books %}
+            <li>{{ book.title }} by {{ book.author }} [Rating: {{book.rating}}]</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
