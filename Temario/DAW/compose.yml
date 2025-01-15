@@ -6,7 +6,9 @@ services:
       - ./html:/web
       - ./vhosts/server1.conf:/etc/apache2/sites-enabled/server1.conf
       - ./vhosts/server2.conf:/etc/apache2/sites-enabled/server2.conf
+      - ./certificados:/certificados
       - ./html/alias:/srv
+      - ./logs:/logs
     networks:
       rede_test:
         aliases:
@@ -16,6 +18,9 @@ services:
           - www.server1.lan
           - server2.lan
           - www.server2.lan
+    ports:
+    - 80:80
+    - 443:443
 
   cliente:
     hostname: cliente
