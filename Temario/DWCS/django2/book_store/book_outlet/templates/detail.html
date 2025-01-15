@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}
+    {{ book.title }}
+{% endblock %}
+
+{% block content %}
     
-</body>
-</html>
+    <h1>{{ book.title }}</h1>
+    
+    <p>Author: {{ book.author }}</p>
+    <p>Rating: {{ book.rating }}</p>
+    {% if is_bestSelling %}
+        <p>Best Selling</p>
+    {% else %}
+        <p>Not Best Selling</p>
+    {% endif %}
+    
+{% endblock %}
