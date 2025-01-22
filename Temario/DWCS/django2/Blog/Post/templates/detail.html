@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'detail.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    
+    {% load static %}
+    <img src="{% static post.imageName %}" alt="Imagen Relacionada">
+    <h2>{{ post.title }} | {{ post.date }}</h2>
+    <h4>Excerpt: {{ post.excerpt }}</h4>
+    <h4>Contenido: {{ post.content }} </h4>
+    <p>Tags: 
+        {% for tag in post.tag.all %}
+            {{tag.caption}}
+        {% endfor %}
+    </p>
+    <address><a href="mailto: {{post.author.email}}">Author: {{post.author.firstName}} {{post.author.lastName}}</a></address>
+    <a href="{% url 'index' %}" id="button">Inicio</a>
 </body>
 </html>

@@ -1,0 +1,20 @@
+img{
+    height: 200px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #000;
+}
+
+#button {
+    background-color: #bda061;
+    color: white;
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 14px 2px 0 0;
+    cursor: pointer;
+    border-radius: 5px;
+}

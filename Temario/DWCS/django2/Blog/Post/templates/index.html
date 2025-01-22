@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    {% for post in posts %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.date }}</p>
-        <p>{{ post.author }}</p>
-        <p>{{ post.tag }}</p>
-    {% endfor %}
+    {% load static %}
+    <div id="contenedor">
+        <img src="{% static 'Banner.png' %}" alt="Banner" id="banner">
+    </div>
+    <div id="content">
+        {% for post in posts|dictsort:"date" %}
+            <a href="{{post.get_absolute_url}}"><p>{{ post.title }} | {{ post.date }}</p></a>
+        {% endfor %}
+        <a href="#" id="todos">Posts</a>
+    </div>
 </body>
 </html>
