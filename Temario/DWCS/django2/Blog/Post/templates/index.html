@@ -16,7 +16,7 @@
         {% for post in posts|dictsort:"date" %}
             <a href="{{post.get_absolute_url}}"><p>{{ post.title }} | {{ post.date }}</p></a>
         {% endfor %}
-        <a href="#" id="todos">Posts</a>
+        <a href="{% url 'posts' %}" id="todos">Posts</a>
     </div>
 </body>
 </html>

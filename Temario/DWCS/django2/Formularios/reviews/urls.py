@@ -1,5 +1,5 @@
 """
-URL configuration for administracion project.
+URL configuration for administration project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,11 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Post import views
+from reviews import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('<slug:slug>', views.detail, name='detail'),
-    path('posts/', views.posts, name='posts'),
+    path('', views.review, name='review'),
+    path('thank-you/', views.thank_you, name='thank_you')
 ]
