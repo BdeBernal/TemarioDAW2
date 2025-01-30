@@ -1,16 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Thank You</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>Thank You!</h1>
-    <p>Your review has been submitted successfully.</p>
-    <p>Here are the details you provided:</p>
-    {% for review in review %}
-    <p>{{ review }}</p>
-    {% endfor %}
+    <h1>Thank You for Your Review!</h1>
+    {% if review_data %}
+        <ul>
+            <li>Username: {{ review_data.username }}</li>
+            <li>Password: {{ review_data.password }}</li>
+            <li>City: {{ review_data.city }}</li>
+            <li>Webserver: {{ review_data.webserver }}</li>
+            <li>Role: {{ review_data.role }}</li>
+        </ul>
+    {% else %}
+        <p>No review data available.</p>
+    {% endif %}
 </body>
 </html>
