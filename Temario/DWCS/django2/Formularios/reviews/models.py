@@ -1,13 +1,12 @@
 from django.db import models
 
-# Create your models here.
-class Review(models.Model):
+class Review(models.Model): # Esto solo para Model forms
     username = models.CharField(max_length=100)
-    password = models.CharField(max_length=100, null=True)
-    city = models.CharField(max_length=100, null=True)
-    webserver = models.CharField(max_length=100, null=True)
-    role = models.CharField(max_length=100, null=True)
-    signon = models.CharField(max_length=100, null=True)
+    password = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    webserver = models.CharField(max_length=20)
+    signon = models.CharField(max_length=20) 
+    role = models.CharField(max_length=10)
 
     def __str__(self):
         return self.username

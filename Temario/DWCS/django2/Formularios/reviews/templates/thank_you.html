@@ -16,9 +16,22 @@
             <li>City: {{ review_data.city }}</li>
             <li>Webserver: {{ review_data.webserver }}</li>
             <li>Role: {{ review_data.role }}</li>
+            <li>Sign-on: {{ review_data.signon }} </li>
         </ul>
     {% else %}
         <p>No review data available.</p>
     {% endif %}
 </body>
+<!-- <body>
+    {% if username %}
+        <h1>Gracias, {{ username }}!</h1>
+        <p>Ciudad: {{ city }}</p>
+        <p>Contraseña: {{ password }}</p>
+        <p>Servidor web: {{ webserver }}</p>
+        <p>Rol: {{ role }}</p>
+        <p>Sign-on: {{ signon }} </p>
+    {% else %}
+        <p>No se recibieron datos.</p>
+    {% endif %}
+</body> -->
 </html>
