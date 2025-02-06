@@ -4,9 +4,30 @@
 
 {% block content %}
   <h1>Students list</h1>
-  <ul>
-    {% for student in students %}
-      <li>{{ student.name }} ({{ student.age }} years old)</li>
-    {% endfor %}
-  </ul>
+
+  <form method="POST" action="{% url 'update_students' %}">
+    {% csrf_token %}
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Curso</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+          <tr>
+             <input type="hidden" name="student_id" value="{{ student.id }}"> <!-- Pongo el input hidden para poder pasar indivualmente el id de cada estudiante -->
+            <td><input type="text" name="name_{{ student.id }}" value="{{ student.name }}"></td>
+            <td><input type="text" name="degree_{{ student.id }}" value="{{ student.degree }}"></td>
+             <td><input type="checkbox" name="delete_{{ student.id }}" id="delete_{{ student.id }}"></td> <!-- En este input verifico que estudiantes se quieren borrar -->
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <br>
+    <button type="submit">Guardar cambios</button>
+  </form>
+
 {% endblock %}
