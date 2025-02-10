@@ -1,15 +1,31 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import Post
+from .models import Post, Comment
+from django.views import View
+from django.views.generic import ListView, DetailView
+from django.shortcuts import redirect
+from django.http import HttpResponseRedirect
 
-def index(request):
-    posts = Post.objects.all().order_by('-date')[:3]
-    return render(request, 'index.html', {'posts': posts})
+class IndexView(ListView):
+    template_name = 'index.html'
+    context_object_name = 'posts'
+    queryset = Post.objects.all().order_by('-date')[:3]
 
-def detail(request, slug):
-    post = Post.objects.get(slug=slug)
-    return render(request, 'detail.html', {'post': post})
+class DetailView(DetailView):
+    model = Post
+    template_name = 'detail.html'
+    context_object_name = 'post'
+    slug_field = 'slug'
+    slug_url_kwarg = 'slug'
 
-def posts(request):
-    posts = Post.objects.all().order_by('-date')
-    return render(request, 'allPosts.html', {'posts': posts})
+class PostsView(ListView):
+    template_name = 'allPosts.html'
+    context_object_name = 'posts'
+    queryset = Post.objects.all().order_by('-date')
+
+class AddCommentView(View):
+    def post(self, request, post_id):
+        selectedPost = Post.objects.get(id=post_id)
+        newComment = Comment(name=request.POST['name'], com=request.POST['com'], post=selectedPost)
+        newComment.save()
+        return HttpResponseRedirect("/" + selectedPost.slug)

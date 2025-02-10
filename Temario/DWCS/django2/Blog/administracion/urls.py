@@ -17,10 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Post import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('<slug:slug>', views.detail, name='detail'),
-    path('posts/', views.posts, name='posts'),
+    path('', views.IndexView.as_view(), name='index'),
+    path('<slug:slug>', views.DetailView.as_view(), name='detail'),
+    path('posts/', views.PostsView.as_view(), name='posts'),
+    path('add_comment/<int:post_id>/', views.AddCommentView.as_view(), name='add_comment'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
