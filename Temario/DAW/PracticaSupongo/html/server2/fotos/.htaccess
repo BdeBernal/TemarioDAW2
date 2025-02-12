@@ -1,0 +1,6 @@
+Require all denied
+<FilesMatch "\.(gif|jpe?g|png|avif|webp)$">
+    Require all granted
+</FilesMatch>
+
+ErrorDocument 403 /Error.html

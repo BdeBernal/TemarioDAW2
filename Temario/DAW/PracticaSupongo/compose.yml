@@ -1,0 +1,30 @@
+services:
+  web:
+    build: docker/apache
+    volumes:
+      #      - ./logs:/logs
+      - ./html:/web
+      - ./Paso3:/srv
+      - ./html/server1/privado:/web/server1/privado
+      - ./html/server2/privado:/web/server2/privado
+      - ./vhosts/server1.conf:/etc/apache2/sites-enabled/server1.conf
+      - ./vhosts/server2.conf:/etc/apache2/sites-enabled/server2.conf
+    networks:
+      rede_test:
+        aliases:
+          - www.server1.lan
+          - server1.lan
+          - www.server2.lan
+          - server2.lan
+
+  cliente:
+    build: docker/cliente
+    networks:
+      - rede_test
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+
+networks:
+  rede_test:

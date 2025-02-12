@@ -1,0 +1,8 @@
+DirectoryIndex un.html dous.html tres.html
+Require all granted
+
+ErrorDocument 403 /Error403.html
+ErrorDocument 404 /Error404.html
+
+RewriteEngine On
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/([a-zA-Z0-9]+)$ /aplicacion_roupa.php?tipo=$1&sexo=$2&talla=$3 [L,NC]

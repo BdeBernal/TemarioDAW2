@@ -26,6 +26,6 @@ class PostsView(ListView):
 class AddCommentView(View):
     def post(self, request, post_id):
         selectedPost = Post.objects.get(id=post_id)
-        newComment = Comment(name=request.POST['name'], com=request.POST['com'], post=selectedPost)
+        newComment = Comment(name=request.POST['name'], com=request.POST['com'], email=request.POST["email"], post=selectedPost)
         newComment.save()
         return HttpResponseRedirect("/" + selectedPost.slug)

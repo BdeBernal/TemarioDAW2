@@ -1,0 +1,29 @@
+services:
+  web1:
+    #image: httpd:latest
+    build: debian
+    hostname: web
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./html:/usr/local/apache2/htdocs
+  bd:
+    image: mysql
+    hostname: basededatos
+    ports:
+      - 3306:3306
+    env_file:
+      - .env_bd
+    volumes:
+      - datosdb:/var/lib/mysql
+    secrets:
+      - db_root_password
+      - db_password
+volumes:
+  datosdb:
+secrets:
+  db_password:
+    file: db_password.txt
+  db_root_password:
+    file: db_root_password.txt

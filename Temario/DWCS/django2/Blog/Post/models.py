@@ -37,8 +37,9 @@ class Post(models.Model):
         return f"{self.title}, {self.slug}, {self.author}, {self.tag}"
     
 class Comment(models.Model):
-    name = models.CharField(max_length=100)
-    com = models.TextField()
+    name = models.CharField(max_length=120)
+    email = models.EmailField(null=True)
+    com = models.TextField(max_length=400)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, null=True, related_name='comments')
 
     def __str__(self):

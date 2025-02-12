@@ -1,0 +1,9 @@
+ervices:
+  web:
+    build: apache
+    hostname: web
+    restart: always
+    ports:
+
+    env_file:
+      - .env_dev
