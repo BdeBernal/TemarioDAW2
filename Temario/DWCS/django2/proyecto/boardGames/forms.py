@@ -38,3 +38,25 @@ class BoardGameForm(forms.ModelForm):
 
 class BrandForm(forms.ModelForm):
     class Meta: 
+        model = Brand
+        fields = '__all__'
+        labels = {
+            'name': 'Nombre',
+            'country': 'País',
+            'language': 'Idioma',
+            'game': 'Juego'
+        }
+        error_messages = {
+            'name': {
+                'required': 'El nombre es obligatorio',
+                'max_length': 'El nombre no puede superar los 50 caracteres'
+            },
+            'country': {
+                'required': 'El país es obligatorio',
+                'max_length': 'El país no puede superar los 50 caracteres'
+            },
+            'language': {
+                'required': 'El idioma es obligatorio',
+                'max_length': 'El idioma no puede superar los 50 caracteres'
+            }
+        }
