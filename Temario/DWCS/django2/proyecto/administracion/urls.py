@@ -27,6 +27,13 @@ urlpatterns = [
     path('createBrand/', views.BrandView.as_view(), name='createBrand'),
     path('listBoardGames/', views.ListBoardGamesViews.as_view(), name='listBoardGames'),
     path('listBoardGames/<int:pk>/', views.SingleBoardGameView.as_view(), name='singleBoardGame'),
+    path('allGames/', views.ListBoardGames.as_view(), name='allGames'),
+    path('allGames/<int:pk>/', views.SingleGameView.as_view(), name='singleGame'),
+    path('listBoardGames/<int:pk>/edit/', views.UpdateBoardGameView.as_view(), name='editBoardGame'),
+    path('listBoardGames/<int:pk>/delete/', views.DeleteBoardGameView.as_view(), name='deleteBoardGame'),
+    path('brands/<int:pk>/edit/', views.UpdateBrandView.as_view(), name='editBrand'),
+    path('brands/<int:pk>/delete/', views.DeleteBrandView.as_view(), name='deleteBrand'),
+
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

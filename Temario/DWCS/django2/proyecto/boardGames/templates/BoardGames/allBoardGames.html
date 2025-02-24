@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoardGames</title>
+</head>
+<body>
+    {% for boardGame in boardGames %}
+    <ul>
+        <li>Name: <a href="{% url 'singleGame' boardGame.id %}">{{ boardGame.title }}</a></li>
+        <li>Players: {{ boardGame.players }}</li>
+    </ul>
+    {% endfor %}
+</body>
+</html>

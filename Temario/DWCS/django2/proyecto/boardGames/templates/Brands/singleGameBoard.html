@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Game Board</title>
+</head>
+<body>
+    <h2>{{ boardGameBrand.name }}</h2>
+    <p>Languages: {{ boardGameBrand.language }}</p>
+    <p>Country: {{ boardGameBrand.country }}</p>
+    <p>Games: {{ boardGameBrand.game }}</p>
+    
+    <a href="{% url 'editBrand' boardGameBrand.id %}"><button>Edit</button></a>
+    <a href="{% url 'deleteBrand' boardGameBrand.id %}"><button>Delete</button></a>
+</body>
+</html>

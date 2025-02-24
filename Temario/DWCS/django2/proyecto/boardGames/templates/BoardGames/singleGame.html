@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>{{ boardGame.title }}</h2>
+    <p>Players: {{ boardGame.players }}</p>
+    <p>Minimun age: {{ boardGame.age }}</p>
+    <p>Aprox. duration: {{ boardGame.duration }}</p>
+    <img src="{{ boardGame.image }}" alt="GameImage">
+    <p>Release year: {{ boardGame.year }}</p>
+    <a href="{% url 'editBoardGame' boardGame.id %}"><button>Editar</button></a>
+    <a href="{% url 'deleteBoardGame' boardGame.id %}"><button>Eliminar</button></a>
+</body>
+</html>

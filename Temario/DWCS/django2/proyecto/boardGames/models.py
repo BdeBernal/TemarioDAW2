@@ -8,7 +8,7 @@ class BoardGame(models.Model):
     players = models.CharField(max_length=20)
     duration = models.CharField(max_length=20)
     age = models.CharField(max_length=20)
-    image = models.ImageField(upload_to='boardGames', null=True, blank=True)
+    image = models.ImageField(upload_to='images')
 
     def __str__(self):
         return self.title

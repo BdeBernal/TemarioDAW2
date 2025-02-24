@@ -6,33 +6,33 @@ class BoardGameForm(forms.ModelForm):
         model = BoardGame
         fields = '__all__'
         labels = {
-            'title': 'Título',
-            'year': 'Año',
-            'players': 'Jugadores',
-            'duration': 'Duración',
-            'age': 'Edad',
-            'image': 'Imagen'
+            'title': 'Title',
+            'year': 'Year',
+            'players': 'Players',
+            'duration': 'Duration',
+            'age': 'Age',
+            'image': 'Image'
         }
         error_messages = {
             'title': {
-                'required': 'El título es obligatorio',
-                'max_length': 'El título no puede superar los 100 caracteres'
+                'required': 'The title is required',
+                'max_length': 'The title cannot exceed 100 characters'
             },
             'year': {
-                'required': 'El año es obligatorio',
-                'max_value': 'El año no puede ser mayor a 2025'
+                'required': 'The year is required',
+                'max_value': 'The year cannot be greater than 2025'
             },
             'players': {
-                'required': 'El número de jugadores es obligatorio',
-                'max_length': 'El número de jugadores no puede superar los 20 caracteres'
+                'required': 'The number of players is required',
+                'max_length': 'The number of players cannot exceed 20 characters'
             },
             'duration': {
-                'required': 'La duración es obligatoria',
-                'max_length': 'La duración no puede superar los 20 caracteres'
+                'required': 'The duration is required',
+                'max_length': 'The duration cannot exceed 20 characters'
             },
             'age': {
-                'required': 'La edad es obligatoria',
-                'max_length': 'La edad no puede superar los 20 caracteres'
+                'required': 'The age is required',
+                'max_length': 'The age cannot exceed 20 characters'
             }
         }
 
@@ -41,22 +41,22 @@ class BrandForm(forms.ModelForm):
         model = Brand
         fields = '__all__'
         labels = {
-            'name': 'Nombre',
-            'country': 'País',
-            'language': 'Idioma',
-            'game': 'Juego'
+            'name': 'Name',
+            'country': 'Country',
+            'language': 'Language',
+            'game': 'Game'
         }
         error_messages = {
             'name': {
-                'required': 'El nombre es obligatorio',
-                'max_length': 'El nombre no puede superar los 50 caracteres'
+                'required': 'The name is required',
+                'max_length': 'The name cannot exceed 50 characters'
             },
             'country': {
-                'required': 'El país es obligatorio',
-                'max_length': 'El país no puede superar los 50 caracteres'
+                'required': 'The country is required',
+                'max_length': 'The country cannot exceed 50 characters'
             },
             'language': {
-                'required': 'El idioma es obligatorio',
-                'max_length': 'El idioma no puede superar los 50 caracteres'
+                'required': 'The language is required',
+                'max_length': 'The language cannot exceed 50 characters'
             }
         }
