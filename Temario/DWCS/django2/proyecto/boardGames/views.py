@@ -5,6 +5,8 @@ from django.views.generic import ListView, DetailView
 from .models import BoardGame, Brand
 from django.urls import reverse_lazy
 from .forms import BoardGameForm, BrandForm
+from django.http import HttpResponseRedirect
+from django.views import View
 # Create your views here.
 
 def index(request):
@@ -57,6 +59,15 @@ class SingleGameView(DetailView):
     model = BoardGame
     context_object_name = 'boardGame'
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        loaded_review = self.object
+        request = self.request
+
+        favorite_id = request.session.get("favoriteBoardGame")
+        context["is_favorite"] = favorite_id == str(loaded_review.id)
+        return context
+
 class UpdateBoardGameView(UpdateView):
     model = BoardGame
     form_class = BoardGameForm
@@ -67,3 +78,9 @@ class DeleteBoardGameView(DeleteView):
     model = BoardGame
     template_name = "BoardGames/deleteBoardGame.html"
     success_url = reverse_lazy("index")
+
+class AddFavoriteView(View):
+    def post(self, request):
+        boardGameId = request.POST["boardGameId"]
+        request.session["favoriteBoardGame"] = boardGameId
+        return HttpResponseRedirect("/allGames/" + boardGameId)

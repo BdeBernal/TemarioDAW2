@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('createBoardGame/', views.BoardGameView.as_view(), name='createBoardGame'),
+    path('boardGame/favorite', views.AddFavoriteView.as_view(), name='favorite'),
     path('createBrand/', views.BrandView.as_view(), name='createBrand'),
     path('listBoardGames/', views.ListBoardGamesViews.as_view(), name='listBoardGames'),
     path('listBoardGames/<int:pk>/', views.SingleBoardGameView.as_view(), name='singleBoardGame'),
