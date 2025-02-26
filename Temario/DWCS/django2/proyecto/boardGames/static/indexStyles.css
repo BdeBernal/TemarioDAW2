@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #d5d8db;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,7 +11,8 @@ body {
 }
 
 h1 {
-    color: #f80000;
+    margin: 0 0 2% 0;
+    color: #a36f6f;
 }
 
 div {
@@ -20,7 +21,7 @@ div {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #7d5cca;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -35,7 +36,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #50248a;
 }
 
 button a {

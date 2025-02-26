@@ -10,8 +10,8 @@
 <body>
     {% for boardGamesBrand in boardGamesBrands %}
     <ul>
-        <li>Marca: <a href="{% url 'singleBoardGame' boardGamesBrand.id %}">{{ boardGamesBrand }}</a></li>
-        <li>Idiomas disponibles: {{ boardGamesBrand.language }}</li>
+        <li>Brand: <a href="{% url 'singleBoardGame' boardGamesBrand.id %}">{{ boardGamesBrand }}</a></li>
+        <li>Languages avaliable: {{ boardGamesBrand.language }}</li>
     </ul>
     {% endfor %}
 </body>

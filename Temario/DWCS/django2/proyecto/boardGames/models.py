@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+### BOARD GAME ####################
 
 class BoardGame(models.Model):
     title = models.CharField(max_length=100)
@@ -13,7 +13,7 @@ class BoardGame(models.Model):
     def __str__(self):
         return self.title
 
-#############################
+### BRAND #########################
 
 class Brand(models.Model):
     name = models.CharField(max_length=50)
