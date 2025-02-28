@@ -14,6 +14,7 @@
     <p>Aprox. duration: {{ boardGame.duration }}</p>
     <img src="{{ boardGame.image.url }}" alt="GameImage">
     <p>Release year: {{ boardGame.year }}</p>
+    <p>Brand: {{ boardGame.brand }}</p>
 
     {% if is_favorite %}
         <p>This is my favorite!</p>
@@ -24,6 +25,8 @@
         <button>Favorite</button>
         </form>
     {% endif %}
+
+    <button><a href="/">Home</a></button>
 
     <a href="{% url 'editBoardGame' boardGame.id %}"><button>Editar</button></a>
     <a href="{% url 'deleteBoardGame' boardGame.id %}"><button>Eliminar</button></a>

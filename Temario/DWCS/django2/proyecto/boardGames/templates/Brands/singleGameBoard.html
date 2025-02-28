@@ -11,8 +11,8 @@
     <h2>{{ boardGameBrand.name }}</h2>
     <p>Languages: {{ boardGameBrand.language }}</p>
     <p>Country: {{ boardGameBrand.country }}</p>
-    <p>Games: {{ boardGameBrand.game }}</p>
-    
+
+    <button><a href="/">Home</a></button>
     <a href="{% url 'editBrand' boardGameBrand.id %}"><button>Edit</button></a>
     <a href="{% url 'deleteBrand' boardGameBrand.id %}"><button>Delete</button></a>
 </body>
