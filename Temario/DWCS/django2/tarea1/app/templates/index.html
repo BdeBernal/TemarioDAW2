@@ -7,7 +7,7 @@
 </head>
 <body>
     {% for student in students %}
-        {{ student.name }}
+     <a href="{{book.get_absolute_url}}">{{student.name}}</a>
     {% endfor %}
 </body>
 </html>
