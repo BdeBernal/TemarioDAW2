@@ -1,6 +1,6 @@
 services:
 
-  web:
+   web:
     build: apache
     hostname: web
     ports:
@@ -9,11 +9,11 @@ services:
     networks:
       rede_test:
         aliases:
-          - a23bernalrc.ddnsfree.com
-          - www.a23bernalrc.ddnsfree.com
+          - prestashop.a23bernalrc.ddnsfree.com
+          - www.prestashop.a23bernalrc.ddnsfree.com
     volumes:
-      - ./app/:/app
-      - ./configs/:/etc/apache2/sites-enabled/
+      - ./app:/var/www/html
+      - ./configs:/etc/apache2/sites-enabled
       - ./certs:/certs
 
 networks:
