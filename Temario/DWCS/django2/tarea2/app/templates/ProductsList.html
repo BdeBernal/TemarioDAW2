@@ -6,10 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    Lista productos
+    <h2>Lista productos</h2>
+
+    <h1>Buscar Productos</h1>
+    <form method="GET">
+        <input type="text" name="q" placeholder="Buscar por nombre..." value="{{ request.GET.q }}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <h2>Lista de Productos</h2>
     {% for product in products %}
-        <p>Name: <a href="{% url 'ProductUpdate' product.id %}">{{product.name}}</a></p>
+        <p>
+            Name: <a href="{% url 'ProductUpdate' product.id %}">{{ product.name }}</a>
+        </p>
         <a href="{% url 'ProductDelete' product.id %}">Eliminar</a>
+    {% empty %}
+        <p>No se encontraron productos.</p>
     {% endfor %}
 </body>
 </html>

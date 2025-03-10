@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    Lista categorías
+    <h2>Lista categorías</h2>
     {% for category in categories %}
         <p>Name: <a href="{% url 'CategoryUpdate' category.id %}">{{category.name}}</a></p>
         <a href="{% url 'CategoryDelete' category.id %}">Eliminar</a>

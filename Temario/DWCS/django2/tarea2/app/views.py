@@ -16,6 +16,13 @@ class ProductsListView(ListView):
     model = Product
     context_object_name = "products"
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        query = self.request.GET.get("q")
+        if query:
+            queryset = queryset.filter(name__icontains=query)  # Filtra por nombre
+        return queryset
+
 class ProductCreateView(CreateView):
     model = Product
     form_class = ProductForm
