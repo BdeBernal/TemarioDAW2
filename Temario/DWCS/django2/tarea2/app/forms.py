@@ -20,12 +20,11 @@ class CategoryForm(forms.ModelForm):
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
-        fields = "__all__"
+        exclude = ["slug"]
         labels = {
             "name": "Your name",
             "description": "Your description",
             "price": "Your price",
             "picture": "Your picture",
-            "slug": "Your slug",
             "catFk": "Your category"
         }
