@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import View
 from django.views.generic import ListView
 from django.views.generic import CreateView, DeleteView, UpdateView
 from .models import Product, Category
@@ -6,8 +7,9 @@ from .forms import ProductForm, CategoryForm
 from django.urls import reverse_lazy
 
 # Create your views here.
-def index(request):
-    return render(request, 'index.html')
+class IndexView(View):
+    def get(self, request):
+        return render(request, 'index.html')
 
 class ProductsListView(ListView):
     template_name = "ProductsList.html"
