@@ -22,12 +22,14 @@ php8.1-pdo \
 php8.1-mysql \
 php8.1-simplexml \
 php8.1-zip \
-php8.1-cli
+php8.1-xml \
+php8.1-xmlreader 
+    
 
-# Instalar Composer
-RUN wget -O composer-setup.php https://getcomposer.org/installer && \
-    php composer-setup.php --install-dir=/usr/local/bin --filename=composer && \
-    rm composer-setup.php
+RUN phpenmod zip
+RUN apt install -y php8.1-zip
+
+
 
 # Habilitar módulos de Apache necesarios
 RUN a2enmod rewrite headers ssl
