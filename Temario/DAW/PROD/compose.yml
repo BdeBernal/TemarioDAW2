@@ -12,7 +12,7 @@ services:
           - prestashop.a23bernalrc.ddnsfree.com
           - www.prestashop.a23bernalrc.ddnsfree.com
     volumes:
-      - ./app:/var/www/html
+      - ./app:/app
       - ./configs:/etc/apache2/sites-enabled
       - ./certs:/certs
 
